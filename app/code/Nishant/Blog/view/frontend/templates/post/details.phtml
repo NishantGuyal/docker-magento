@@ -1,0 +1,19 @@
+<?php
+
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+use Nishant\Blog\ViewModel\Post;
+
+/** @var Template $block */
+/** @var Post $postVm */
+/** @var Escaper $escaper */
+
+$postVm = $block->getData('post_vm');
+$post = $postVm->getDetail();
+?>
+
+<div class="blog.post.detail">
+    <h1><?=__($escaper->escapeHtml($post->getTitle()))?></h1>
+    <p><em><?=__('Created at: %1', $post->getCreatedAt())?></em></p>
+    <p><?=__($escaper->escapeHtml($post->getContent()))?></p>
+</div>

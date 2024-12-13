@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<referenceContainer name="main">
+			<block name="blog.post.details" template="Nishant_Blog::post/details.phtml">
+				<arguments>
+					<argument name="post_vm" xsi:type="object">
+						Nishant\Blog\ViewModel\Post
+					</argument>
+				</arguments>
+			</block>
+			<referenceContainer name="sidebar.additional">
+				<block name="blog.post.sidebar" template="Nishant_Blog::post/sidebar.phtml">
+					<arguments>
+						<argument name="post_vm" xsi:type="object">
+							Nishant\Blog\ViewModel\Post
+						</argument>
+					</arguments>
+				</block>
+				<referenceBlock name="catalog.compare.sidebar" display="false" />
+				<referenceBlock name="wishlist_sidebar" display="false" />
+			</referenceContainer>
+		</referenceContainer>
+	</body>
+</page>

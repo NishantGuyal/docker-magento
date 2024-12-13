@@ -1,0 +1,24 @@
+<?php
+
+use Magento\Framework\Escaper;
+use Magento\Framework\View\Element\Template;
+use Nishant\Blog\ViewModel\Post;
+
+/** @var Template $block */
+/** @var Post $postVm */
+/** @var Escaper $escaper*/
+
+$postVm = $block->getData('post_vm');
+?>
+<div class="blog.post.sidebar">
+    <h1><?=__("Other Blog Posts")?></h1>
+    <ul>
+        <?php foreach ($postVm->getList() as $post): ?>
+            <li>
+            <a href="<?=$block->getUrl('blog/post/details', ['id' => $post->getData('post_id')])?>">
+                <?=$escaper->escapeHtml($post->getData('title'))?>
+            </a>
+        </li>
+        <?php endforeach;?>
+    </ul>
+</div>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<type name="Nishant\Blog\Observer\LogPostDetailView">
+		<plugin name="nishant_blogextra_add_data_to_post_detail_observer" type="Nishant\BlogExtra\Plugin\AddDataToPostDetailObserver" />
+		<plugin name="nishant_blogextra_prevent_post_detail_logger" type="Nishant\BlogExtra\Plugin\PreventPostDetailLogger" disabled="true" />
+	</type>
+	<type name="Nishant\Blog\Controller\Post\Details">
+		<plugin name="nishant_blogextra_alternate_post_detail_template" type="Nishant\BlogExtra\Plugin\AlternatePostDetailTemplate" />
+	</type>
+	<preference for="Nishant\Blog\Controller\Post\Details" type="Nishant\BlogExtra\Controller\Post\Details" />
+</config>
