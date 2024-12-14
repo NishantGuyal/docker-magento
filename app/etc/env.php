@@ -116,7 +116,7 @@ return [
     ],
     'cache_types' => [
         'config' => 1,
-        'layout' => 1,
+        'layout' => 0,
         'block_html' => 0,
         'collections' => 1,
         'reflection' => 1,
