@@ -12,7 +12,7 @@ $message = $block->getData('get_message');
 {
     "#vue-test": {
         "Nishant_JsFun/js/vue-test": {
-            "message": "<?=$message->getMessage() // Call your function here... ?>"
+            "message": "<?=str_shuffle($message->getMessage()) // Call your function here... ?>"
         }
     }
 }

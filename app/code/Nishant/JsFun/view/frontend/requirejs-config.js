@@ -38,10 +38,17 @@ it with, and setting that property to true.
 var config = {
     "map": {
         "*": {
-            "fadeInElement": "Nishant_JsFun/js/fade-in-element"
+            "fadeInElement": "Nishant_JsFun/js/fade-in-element",
+            "Magento_Review/js/submit-review": "Nishant_JsFun/js/submit-review"
         }
     },
     "paths": {
-        "vue": "https://cdn.jsdelivr.net/npm/vue@2/dist/vue"
-    }
+        "vue": ["https://cdn.jsdelivr.net/npm/vue@2/dist/vue1",
+            "Nishant_JsFun/js/vue"
+        ]
+    },
+    "shim": {
+        "Nishant_JsFun/js/jquery-log": ["jquery"]
+    },
+    "debs": ["Nishant_JsFun/js/every-page"],
 };
