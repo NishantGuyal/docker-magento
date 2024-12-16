@@ -376,6 +376,7 @@ return [
         'MarkShust_DisableTwoFactorAuth' => 1,
         'Nishant_Blog' => 1,
         'Nishant_BlogExtra' => 1,
+        'Nishant_CheckoutMessages' => 1,
         'Nishant_FreeShippingPromo' => 1,
         'Nishant_JsFun' => 1,
         'PayPal_Braintree' => 1,

@@ -1,3 +1,15 @@
-<div id="free-shipping-banner">
-    Free Shipping Promo
+<?php
+
+/** @var $block Magento\Framework\View\Element\Template */
+?>
+<div id="free-shipping" data-bind="scope: 'free-shipping'">
+     <!-- ko template: getTemplate() --><!-- /ko -->
 </div>
+
+<script type="text/x-magento-init">
+    {
+        "#free-shipping": {
+            "Magento_Ui/js/core/app": <?=$block->getJsLayout()?>
+        }
+    }
+</script>

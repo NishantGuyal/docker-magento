@@ -6,10 +6,9 @@
 */
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
-	<module name="Nishant_FreeShippingPromo">
+	<module name="Nishant_CheckoutMessages">
 		<sequence>
-			<module name="Magento_Customer">
-			</module>
+			<module name="Magento_Checkout" />
 		</sequence>
 	</module>
 </config>
