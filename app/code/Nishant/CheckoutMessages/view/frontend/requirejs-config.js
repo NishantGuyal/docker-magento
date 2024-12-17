@@ -5,5 +5,10 @@ var config = {
                 'Nishant_CheckoutMessages/js/view/summary/cart-items-mixin': true
             }
         }
+    },
+    map: {
+        '*': {
+            'Magento_Checkout/template/sidebar': 'Nishant_CheckoutMessages/template/sidebar'
+        }
     }
 };

@@ -35,7 +35,8 @@ define(['uiComponent', 'Magento_Customer/js/customer-data', 'underscore', 'knock
             self.message = ko.computed(function () {
                 var subtotal = self.subtotal();
                 if (_.isUndefined(subtotal) || subtotal === 0) {
-                    return self.messageDefault;
+                    return self.messageDefault.replace('{{freeShippingThreshold}}', self.freeShippingThreshold);
+
                 }
                 if (subtotal > 0 && subtotal < self.freeShippingThreshold) {
                     var subtotalRemaining = self.freeShippingThreshold - subtotal;
