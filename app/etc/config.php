@@ -378,6 +378,7 @@ return [
         'Nishant_BlogExtra' => 1,
         'Nishant_CheckoutMessages' => 1,
         'Nishant_FreeShippingPromo' => 1,
+        'Nishant_Inventory' => 1,
         'Nishant_JsFun' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeCustomerBalance' => 1,

@@ -1,10 +1,9 @@
 <?php
 
-declare(strict_types=1);
+declare (strict_types = 1);
 
 namespace Nishant\Blog\Controller\Index;
 
-use Magento\Customer\Model\Session;
 use Magento\Framework\App\Action\HttpGetActionInterface;
 use Magento\Framework\Controller\Result\Forward;
 use Magento\Framework\Controller\Result\ForwardFactory;

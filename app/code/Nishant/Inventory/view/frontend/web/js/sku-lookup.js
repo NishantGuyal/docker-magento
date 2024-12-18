@@ -1,0 +1,25 @@
+define(['uiComponent', 'ko', 'mage/storage'], function (Component, ko, storage) {
+    'use strict';
+    return Component.extend({
+        defaults: {
+            template: 'Nishant_Inventory/sku-lookup',
+            sku: ko.observable('24-MB01'),
+            placeholder: 'Example: 24-MB01',
+            messageResponse: ko.observable(''),
+        },
+        initialize() {
+            this._super();
+            console.log("skuLookup component has been loaded.");
+        },
+        handleSubmit() {
+            this.messageResponse('');
+            storage.get(`rest/V1/products/${this.sku()}`).done(response => {
+                console.log(response);
+                this.messageResponse(`Product Found <strong>${response.name}</strong>`);
+            }).fail(() => {
+                this.messageResponse('Product not found');
+            })
+
+        }
+    });
+});
