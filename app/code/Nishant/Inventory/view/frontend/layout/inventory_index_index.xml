@@ -11,6 +11,16 @@
 									Nishant_Inventory/js/sku-lookup
 								</item>
 							</item>
+							<item name="boxConfigurations" xsi:type="array">
+								<item name="component" xsi:type="string">
+									Nishant_Inventory/js/box-configurations
+								</item>
+								<item name="config" xsi:type="array">
+									<item name="template" xsi:type="string">
+										Nishant_Inventory/box-configurations
+									</item>
+								</item>
+							</item>
 						</item>
 					</argument>
 				</arguments>
