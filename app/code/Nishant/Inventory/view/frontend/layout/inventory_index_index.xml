@@ -21,6 +21,16 @@
 									</item>
 								</item>
 							</item>
+							<item name="reviewSubmit" xsi:type="array">
+								<item name="component" xsi:type="string">
+									Nishant_Inventory/js/review-submit
+								</item>
+								<item name="config" xsi:type="array">
+									<item name="template" xsi:type="string">
+										Nishant_Inventory/review-submit
+									</item>
+								</item>
+							</item>
 						</item>
 					</argument>
 				</arguments>

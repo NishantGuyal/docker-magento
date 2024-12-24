@@ -1,0 +1,22 @@
+<div class="review-submit">
+    <h2>Review and Submit</h2>
+    <p>Please review the box configurations before submitting</p>
+    <table>
+        <thead>
+            <tr>
+                <th data-bind="i18n: 'Number of boxes'"></th>
+                <th data-bind="i18n: 'Shipment weight'"></th>
+                <th data-bind="i18n: 'Billable weight'"></th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><span data-bind="text: getUpdatedNumberOfBoxes()"></span></td>
+                <td>0</td>
+                <td>0</td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="checkbox" name="review-checkbox">I agree to Terms & Conditions.</input>
+    <button class="action primary" type="submit">Accept Shipping Plan</button>
+</div>

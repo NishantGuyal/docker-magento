@@ -1,33 +1,38 @@
-define(['uiComponent', 'ko'], function (Component, ko) {
-    'use strict'
-    const boxConfigurations = () => {
-        return {
-            lenght: ko.observable(),
-            width: ko.observable(),
-            height: ko.observable(),
-            weight: ko.observable(),
-            unitsPerBox: ko.observable(),
-            numberOfBoxes: ko.observable(),
-        }
-    }
-    return Component.extend({
-        defaults: {
-            boxConfigurations: ko.observableArray([boxConfigurations()])
-        },
-        initialize() {
-            this._super()
-            console.log('Box configurations are loaded')
-        },
-        handleAdd() {
-            this.boxConfigurations.push(boxConfigurations());
-        },
-        handleDelete(index) {
-            console.log('parent: ', parent);
-            console.log('index: ', index);
-            this.boxConfigurations.splice(index, 1);
-        },
-        handleSubmit() {
-            console.log("Submit box configs")
-        }
+define(['uiComponent', 'ko', 'Nishant_Inventory/js/model/box-configurations', 'Nishant_Inventory/js/model/sku', 'jquery', ''],
+    function (Component, ko, boxConfigurationsModel, skuModel, $) {
+        'use strict'
+
+        return Component.extend({
+            defaults: {
+                boxConfigurationsModel: boxConfigurationsModel
+            },
+            initialize() {
+                this._super()
+                console.log('Box configurations are loaded')
+
+                skuModel.isSuccess.subscribe((value) => {
+                    console.log("Value old: ", value);
+                });
+
+                skuModel.isSuccess.subscribe((value) => {
+                    console.log("Value new: ", value);
+                }, null, 'beforeChange');
+            },
+            handleAdd() {
+                boxConfigurationsModel.add();
+            },
+            handleDelete(index) {
+                boxConfigurationsModel.delete(index);
+            },
+            handleSubmit() {
+                $('.box-configurations form input').removeAttr('aria-invalid');
+
+                if ($('.box-configurations form').valid()) {
+                    boxConfigurationsModel.isSuccess(true);
+                }
+                else {
+                    boxConfigurationsModel.isSuccess(false);
+                }
+            }
+        });
     });
-});

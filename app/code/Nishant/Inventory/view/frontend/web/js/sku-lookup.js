@@ -1,12 +1,12 @@
-define(['uiComponent', 'ko', 'mage/storage', 'jquery', 'mage/translate'], function (Component, ko, storage, $, $t) {
+define(['uiComponent', 'ko', 'mage/storage', 'jquery', 'mage/translate', 'Nishant_Inventory/js/model/sku'], function (Component, ko, storage, $, $t, skuModel) {
     'use strict';
     return Component.extend({
         defaults: {
             template: 'Nishant_Inventory/sku-lookup',
-            sku: ko.observable('24-MB01'),
+            sku: skuModel.sku,
             placeholder: $t('Example: %1'.replace('%1', '24-MB01')),
             messageResponse: ko.observable(''),
-            isSuccess: ko.observable(false),
+            isSuccess: skuModel.isSuccess,
         },
         initialize() {
             this._super();
