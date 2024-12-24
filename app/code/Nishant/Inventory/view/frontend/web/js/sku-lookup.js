@@ -3,10 +3,11 @@ define(['uiComponent', 'ko', 'mage/storage', 'jquery', 'mage/translate', 'Nishan
     return Component.extend({
         defaults: {
             template: 'Nishant_Inventory/sku-lookup',
-            sku: skuModel.sku,
+            sku: ko.observable('24-MB01'),
             placeholder: $t('Example: %1'.replace('%1', '24-MB01')),
             messageResponse: ko.observable(''),
             isSuccess: skuModel.isSuccess,
+            // skuModel: skuModel,
         },
         initialize() {
             this._super();
@@ -15,7 +16,8 @@ define(['uiComponent', 'ko', 'mage/storage', 'jquery', 'mage/translate', 'Nishan
         handleSubmit() {
             $('body').trigger('processStart');
             this.messageResponse('');
-            this.isSuccess(false);
+            // this.isSuccess(false);
+            skuModel.isSuccess(false);
 
             storage.get(`rest/V1/products/${this.sku()}`).done(response => {
                 console.log(response);
@@ -27,6 +29,6 @@ define(['uiComponent', 'ko', 'mage/storage', 'jquery', 'mage/translate', 'Nishan
             }).always(() => {
                 $('body').trigger('processStop');
             })
-        }
+        },
     });
 });

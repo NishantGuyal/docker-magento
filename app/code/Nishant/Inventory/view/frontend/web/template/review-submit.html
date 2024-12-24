@@ -11,12 +11,17 @@
         </thead>
         <tbody>
             <tr>
-                <td><span data-bind="text: getUpdatedNumberOfBoxes()"></span></td>
-                <td>0</td>
-                <td>0</td>
+                <td><span data-bind="text: getNumberOfBoxes()"></span></td>
+                <td><span data-bind="text: getTotalWeight()"></span> kg</td>
+                <td><span data-bind="text: getBilledWeight()"></span> kg</td>
             </tr>
         </tbody>
     </table>
-    <input type="checkbox" name="review-checkbox">I agree to Terms & Conditions.</input>
-    <button class="action primary" type="submit">Accept Shipping Plan</button>
+
+    <input type="checkbox" name="review-checkbox" data-bind="checked: isTermsAgreed"> I agree to Terms & Conditions.
+
+    <button class="action primary" type="submit"
+        data-bind="enable: getButtonUpdate(), css: { 'button-enabled': isTermsAgreed(), 'button-disabled': !isTermsAgreed() }">
+        Accept Shipping Plan
+    </button>
 </div>

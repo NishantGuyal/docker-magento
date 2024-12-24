@@ -11,11 +11,11 @@ define(['uiComponent', 'ko', 'Nishant_Inventory/js/model/box-configurations', 'N
                 console.log('Box configurations are loaded')
 
                 skuModel.isSuccess.subscribe((value) => {
-                    console.log("Value old: ", value);
+                    // console.log("Value old: ", value);
                 });
 
                 skuModel.isSuccess.subscribe((value) => {
-                    console.log("Value new: ", value);
+                    // console.log("Value new: ", value);
                 }, null, 'beforeChange');
             },
             handleAdd() {
