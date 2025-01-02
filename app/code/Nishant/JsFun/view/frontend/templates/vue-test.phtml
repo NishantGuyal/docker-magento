@@ -1,0 +1,19 @@
+<?php
+/** @var Nishant\JsFun\ViewModel\Message $message  */
+
+$message = $block->getData('get_message');
+?>
+
+<div id="vue-test">
+    <h1>{{message}}</h1>
+</div>
+
+<script type="text/x-magento-init">
+{
+    "#vue-test": {
+        "Nishant_JsFun/js/vue-test": {
+            "message": "<?=str_shuffle($message->getMessage()) // Call your function here... ?>"
+        }
+    }
+}
+</script>

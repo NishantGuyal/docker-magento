@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+	<body>
+		<referenceContainer name="content">
+			<block class="Magento\Framework\View\Element\Template" name="shipping_plan" template="Nishant_Inventory::shipping-plan.phtml">
+				<arguments>
+					<argument name="jsLayout" xsi:type="array">
+						<item name="components" xsi:type="array">
+							<item name="skuLookup" xsi:type="array">
+								<item name="component" xsi:type="string">
+									Nishant_Inventory/js/sku-lookup
+								</item>
+							</item>
+							<item name="boxConfigurations" xsi:type="array">
+								<item name="component" xsi:type="string">
+									Nishant_Inventory/js/box-configurations
+								</item>
+								<item name="config" xsi:type="array">
+									<item name="template" xsi:type="string">
+										Nishant_Inventory/box-configurations
+									</item>
+								</item>
+							</item>
+							<item name="reviewSubmit" xsi:type="array">
+								<item name="component" xsi:type="string">
+									Nishant_Inventory/js/review-submit
+								</item>
+								<item name="config" xsi:type="array">
+									<item name="template" xsi:type="string">
+										Nishant_Inventory/review-submit
+									</item>
+								</item>
+							</item>
+						</item>
+					</argument>
+				</arguments>
+			</block>
+		</referenceContainer>
+	</body>
+</page>

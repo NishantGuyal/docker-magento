@@ -1,0 +1,29 @@
+<div class="review-submit" data-bind="visible: boxConfigIsSuccess">
+    <h2>Review and Submit</h2>
+    <p>Please review the box configurations before submitting</p>
+    <form data-bind="submit: handleSubmit, attr: { action: getUrl() }" method="post">
+        <table>
+            <thead>
+                <tr>
+                    <th data-bind="i18n: 'Number of boxes'"></th>
+                    <th data-bind="i18n: 'Shipment weight'"></th>
+                    <th data-bind="i18n: 'Billable weight'"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><span data-bind="text: getNumberOfBoxes()"></span></td>
+                    <td><span data-bind="text: getTotalWeight()"></span> kg</td>
+                    <td><span data-bind="text: getBilledWeight()"></span> kg</td>
+                </tr>
+            </tbody>
+        </table>
+        <input type="hidden" name="boxConfigurations" data-bind="value: ko.toJSON(boxConfigurations)" />
+        <input type="hidden" name="sku" data-bind="value: sku()" />
+    </form>
+    <input type="checkbox" name="review-checkbox" data-bind="checked: isTermsAgreed"> I agree to Terms & Conditions.
+
+    <button class="action primary" type="submit" data-bind="enable: getButtonUpdate()">
+        Accept Shipping Plan
+    </button>
+</div>

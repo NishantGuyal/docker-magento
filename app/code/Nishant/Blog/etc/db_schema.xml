@@ -1,0 +1,11 @@
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+	<table name="nishant_blog_posts" resource="default" engine="innodb" comment="Blog Post Table">
+		<column xsi:type="int" name="post_id" unsigned="true" nullable="false" identity="true" comment="Post ID" />
+		<column xsi:type="varchar" name="title" nullable="false" length="255" comment="Post Title" />
+		<column xsi:type="mediumtext" name="content" nullable="true" comment="Post Content" />
+		<column xsi:type="timestamp" name="created_at" on_update="false" nullable="false" default="CURRENT_TIMESTAMP" comment="Posts Created At" />
+		<constraint xsi:type="primary" referenceId="PRIMARY">
+			<column name="post_id" />
+		</constraint>
+	</table>
+</schema>
