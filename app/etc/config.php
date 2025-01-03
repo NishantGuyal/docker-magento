@@ -382,6 +382,7 @@ return [
         'Nishant_FreeShippingPromo' => 1,
         'Nishant_Inventory' => 1,
         'Nishant_JsFun' => 1,
+        'Nishant_Minerva' => 1,
         'Nishant_ProductCompare' => 1,
         'PayPal_Braintree' => 1,
         'PayPal_BraintreeCustomerBalance' => 1,
