@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "8c6d054ea25fca382a98ca452aad6cb8",
+    "content-hash": "a4c04567282f9327c2647778d251fc19",
     "packages": [
         {
             "name": "2tvenom/cborencode",
@@ -24609,6 +24609,43 @@
                 "source": "https://github.com/wikimedia/less.php/tree/v3.2.1"
             },
             "time": "2023-02-03T06:43:41+00:00"
+        },
+        {
+            "name": "yireo/magento2-disable-csp",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/yireo/Yireo_DisableCsp.git",
+                "reference": "145d3c740e1e2f554305b512269b40875fc626a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/yireo/Yireo_DisableCsp/zipball/145d3c740e1e2f554305b512269b40875fc626a1",
+                "reference": "145d3c740e1e2f554305b512269b40875fc626a1",
+                "shasum": ""
+            },
+            "require": {
+                "magento/framework": "^100.0|^101.0|^102.0|^103.0",
+                "magento/module-csp": "^100.0"
+            },
+            "type": "magento2-module",
+            "autoload": {
+                "files": [
+                    "registration.php"
+                ],
+                "psr-4": {
+                    "Yireo\\DisableCsp\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "OSL-3.0"
+            ],
+            "description": "Disable CSP",
+            "support": {
+                "source": "https://github.com/yireo/Yireo_DisableCsp/tree/1.0.2"
+            },
+            "time": "2025-01-02T18:20:37+00:00"
         }
     ],
     "packages-dev": [

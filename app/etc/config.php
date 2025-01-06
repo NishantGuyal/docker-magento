@@ -374,11 +374,12 @@ return [
         'Magento_WishlistGraphQl' => 1,
         'Magento_WishlistSampleData' => 1,
         'Juno_Theme' => 1,
+        'Macademy_CheckoutMessages' => 1,
         'MarkShust_DisableTwoFactorAuth' => 1,
         'MarkShust_LayoutHandleLogger' => 1,
         'Nishant_Blog' => 1,
         'Nishant_BlogExtra' => 1,
-        'Nishant_CheckoutMessages' => 1,
+        'Nishant_CustomCheckout' => 1,
         'Nishant_FreeShippingPromo' => 1,
         'Nishant_Inventory' => 1,
         'Nishant_JsFun' => 1,
@@ -388,6 +389,7 @@ return [
         'PayPal_BraintreeCustomerBalance' => 1,
         'PayPal_BraintreeGiftCardAccount' => 1,
         'PayPal_BraintreeGiftWrapping' => 1,
-        'PayPal_BraintreeGraphQl' => 1
+        'PayPal_BraintreeGraphQl' => 1,
+        'Yireo_DisableCsp' => 1
     ]
 ];
