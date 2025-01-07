@@ -1,0 +1,21 @@
+<li id="doctor" class="checkout-doctor" data-bind="fadeVisible: isVisible">
+
+    <form data-bind="submit: navigateToNextStep" novalidate="novalidate">
+        <div class="doctor-step">
+            <h2 data-bind="i18n: 'Doctor Information'"></h2>
+            <p data-bind="i18n: 'Please provide your doctor\'s information for prescription verification.'"></p>
+
+            <label for="doctor-name" data-bind="i18n: 'Doctor\'s Name'"></label>
+            <input type="text" id="doctor-name" data-bind="value: doctorName" placeholder="Enter doctor\'s name" />
+
+            <label for="doctor-phone" data-bind="i18n: 'Doctor\'s Phone Number'"></label>
+            <input type="text" id="doctor-phone" data-bind="value: doctorPhone"
+                placeholder="Enter doctor\'s phone number" />
+        </div>
+        <div class="primary">
+            <button data-role="opc-continue" type="submit" class="button action continue primary">
+                <span translate="'Submit'"></span>
+            </button>
+        </div>
+    </form>
+</li>
