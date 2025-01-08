@@ -379,6 +379,7 @@ return [
         'MarkShust_LayoutHandleLogger' => 1,
         'Nishant_Blog' => 1,
         'Nishant_BlogExtra' => 1,
+        'Nishant_CheckoutMessage' => 1,
         'Nishant_CustomCheckout' => 1,
         'Nishant_FreeShippingPromo' => 1,
         'Nishant_Inventory' => 1,

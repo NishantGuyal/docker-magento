@@ -88,7 +88,6 @@
 																			before-login-form
 																		</item>
 																		<item name="children" xsi:type="array">
-																			<!-- before login form fields -->
 																		</item>
 																	</item>
 																	<item name="additional-login-form-fields" xsi:type="array">
@@ -99,7 +98,6 @@
 																			additional-login-form-fields
 																		</item>
 																		<item name="children" xsi:type="array">
-																			<!-- additional login form fields -->
 																		</item>
 																	</item>
 																</item>
