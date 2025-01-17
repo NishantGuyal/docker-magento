@@ -380,7 +380,7 @@ return [
         'Nishant_Blog' => 1,
         'Nishant_BlogExtra' => 1,
         'Nishant_CheckoutMessage' => 1,
-        'Nishant_CustomCheckout' => 1,
+        'Nishant_CustomCheckout' => 0,
         'Nishant_FreeShippingPromo' => 1,
         'Nishant_Inventory' => 1,
         'Nishant_JsFun' => 1,
