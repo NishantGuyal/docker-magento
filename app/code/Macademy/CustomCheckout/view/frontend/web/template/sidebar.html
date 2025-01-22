@@ -1,4 +1,12 @@
-<div id="opc-sidebar" data-bind="afterRender:setModalElement, mageInit: {
+<!--
+/**
+ * Copyright © Magento, Inc. All rights reserved.
+ * See COPYING.txt for license details.
+ */
+-->
+
+<div id="opc-sidebar"
+     data-bind="afterRender:setModalElement, mageInit: {
     'Magento_Ui/js/modal/modal':{
         'type': 'custom',
         'modalClass': 'opc-sidebar opc-summary-wrapper',
@@ -9,17 +17,18 @@
         'overlayClass': 'modal-custom-overlay',
         'buttons': []
     }}">
+
     <!-- ko foreach: getRegion('summary') -->
     <!-- ko template: getTemplate() --><!-- /ko -->
     <!--/ko-->
+
     <!-- ko foreach: getRegion('after-summary') -->
     <!-- ko template: getTemplate() --><!-- /ko -->
     <!--/ko-->
-    <!-- <div data-bind="html: window.checkoutConfig.fulfillment_status"></div> -->
+
     <div class="opc-block-shipping-information">
         <!-- ko foreach: getRegion('shipping-information') -->
         <!-- ko template: getTemplate() --><!-- /ko -->
         <!--/ko-->
     </div>
-
 </div>
